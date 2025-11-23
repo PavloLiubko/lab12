@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+
+	cout << "Чотирьохцифрові числа, які в сумі дають 27:\n";
+	
+	for (int i = 1000; i <= 9999; i++) {
+		for (int j = -9999; j <= -1000; j++) {
+			if (j + i == 27) {
+				cout << i << " та " << j << endl; 
+}
+}
+}
+
+return 0;
+}
