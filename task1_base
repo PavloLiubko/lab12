@@ -1,0 +1,35 @@
+#include <iostream>
+#include <vector>
+
+
+using namespace std;
+
+int main() {
+
+	int n;
+	cout << "Введіть якесь значення для числа n:";
+	cin >> n;
+
+	std::vector<int> nums;
+	
+	while (true) {
+	cout << "Введіть якесь ціле число:";
+	int num;
+	cin >> num;
+	if (num >  n) {
+		break;
+}
+	else if (num < n) {
+		nums.push_back(num);
+}
+}
+
+	double sum = 0;
+	for (int i = 0; i < nums.size(); i++) {
+		sum+= nums[i];
+}	
+
+	cout << "Середнє значення додатних чисел, які вводились до числа n = " <<  sum/nums.size();		
+
+	return 0;
+}
