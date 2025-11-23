@@ -1,0 +1,55 @@
+#include <iostream>
+#include <algorithm>
+#include <cmath>
+
+using namespace std;
+
+int main() {
+
+	int Z[12];
+
+	for (int i = 0; i < 12; i++) {
+		cout << "Введіть якесь значення для елементу масиву:";
+		cin >> Z[i];
+		cout << endl;
+}	
+
+	cout << "Наш початковий масив: \n";
+	for (int i = 0; i < 12; i++) {
+		cout << Z[i] << endl;
+}
+	
+	cout << "Наш мінімальний елемент: " << *min_element(Z, Z + 12) << endl;
+	
+	int sum = 0;
+	int counter = 0;
+	for (int i = 0; i < 12; i++) {
+		sum += Z[i];
+		counter += 1;
+}
+
+	cout << "Середнє арифметичне елементів нашого масиву = " << sum/counter << endl;
+		
+	int sum_minus = 0;
+	int counter_minus = 0;
+	for (int i = 0; i < 12; i++) {
+		sum_minus += Z[i];
+		counter_minus += 1;
+}
+
+	int zamina = abs(sum_minus/counter_minus);
+	
+	for (int i = 0; i < 12; i++) {
+		if ( Z[i] == *min_element(Z, Z + 12 )) {
+			Z[i] = zamina;
+}
+}
+
+	cout << "Наш змінений масив: \n";
+	for (int i = 0; i < 12; i++) {
+		cout << Z[i] << endl;
+}
+	
+	return 0;
+
+}
