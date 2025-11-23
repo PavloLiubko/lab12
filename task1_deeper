@@ -1,0 +1,26 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+	
+	int N[11];
+	for (int i = 0; i < 11; i++ ) {
+		cout << "Введіть якесь число як елемент масиву:";
+		cin >> N[i];
+}
+
+	double sum = 0;
+	double counter = 0;
+	for (int i = 0; i < 11; i++ ) {
+	    
+	    if (N[i] % 2 == 0) {
+		sum += N[i];
+		counter += 1; }
+}
+
+	cout << "Середнє арифметичне елементів нашого масиву = " << sum/counter;
+
+
+	return 0;
+}
