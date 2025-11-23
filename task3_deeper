@@ -1,0 +1,32 @@
+#include <iostream> 
+
+using namespace std;
+
+int main() {
+
+	int X[10];
+	for (int i = 0; i < 10; i++) {
+		cout << "Введіть якесь значення для елементу масиву:";
+		cin >> X[i];
+}
+	int counter_true = 1;
+	for (int i = 0; i < 10; i++) {
+		if ( X[i] <= X[i+1] ) {
+			break;
+}
+		else {
+		counter_true += 1;
+		continue;
+}
+}
+
+	if ( counter_true == 10 ) {
+		cout << "Ваш масив упорядкований за зменшенням";
+}   
+    else {
+        cout << "Ваш не масив упорядкований за зменшенням";
+}   
+    
+	
+	return 0;
+}
